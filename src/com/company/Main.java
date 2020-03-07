@@ -1,6 +1,6 @@
 package com.company;
 
-/**co.Alisher*/
+
 
 public class Main {
 
