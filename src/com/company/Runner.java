@@ -1,39 +1,38 @@
 package com.company;
 
 public class Runner extends Thread {
-    private  int numplus ;
 
+    private int nameNumPlus;
 
     public Runner(String name) {
         super(name);
     }
 
-    public int getNumplus() {
-        return numplus;
+    public int getNameNumPlus() {
+        return nameNumPlus;
     }
 
-    public void setNumplus(int numplus) {
-        this.numplus = numplus;
+    public void setNamePlus(int nameNumPlus) {
+        this.nameNumPlus = nameNumPlus;
     }
 
-    synchronized public  void run(){
+    synchronized public void run() {
+
         System.out.println(this.getName() + " берет палочку");
 
         try {
 
-            if (getPriority() >= 5 ) {
+            if (getPriority() >= 5) {
                 System.out.println(getName() + " бежит к финишу");
-                System.out.println(getName() + " бежит к " + "Бегун " + (getNumplus()));
-            } else {
-                System.out.println(getName() + " бежит к " + "Бегун " + (getNumplus()));
-
+                System.out.println(getName() + " бежит к " + "Бегун " + (getNameNumPlus()));
+            } else if(getNameNumPlus() > 0) {
+                System.out.println(getName() + " бежит к " + "Бегун " + (getNameNumPlus()));
             }
 
-        } catch (Exception e) { }
+        } catch (Exception e) {
+
+        }
     }
 }
-
-
-
 
 
